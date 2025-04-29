@@ -1,4 +1,5 @@
 body{
+
     background-color: rgb(138, 179, 210);
     color:rgb(26, 27, 27);
 }
@@ -80,4 +81,5 @@ img{
     .experiences {
         flex: 1 1 100%; 
     }
+
 }
