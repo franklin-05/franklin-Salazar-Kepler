@@ -4,8 +4,6 @@ body{
     color:rgb(26, 27, 27);
 }
 
-
-
 h1{
 text-align: center;
 font-style:roboto;
@@ -14,17 +12,19 @@ h2,p,ul,li{
     padding-top: 20px,30px,50px,80px;
     display:block;
 }
-.top{
-    overflow: hidden;
-    background-color: #333;
-}
-.top a {
-    float: left;
-    color: #f2f2f2;
+
+.top {
+    float: right;
+    color: rgb(138, 179, 210);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size:17px;
+ 
+  }
+  a:link{
+    text-decoration:none;
+    color:#ccc;
   }
 
   .fa {
@@ -62,7 +62,7 @@ img{
 .master-experience{
     padding: 40px;
 }
-.experiences{
+.experiences,.experiences-2,.experiences-3{
     flex: 1 1 calc(25% - 20px); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     padding: 15px;
@@ -71,15 +71,35 @@ img{
     background-color: #f9f9f9bd; 
 }
 
-@media (max-width: 768px) {
-    .experiences {
+/*This is for Ipads viewing*/
+@media (max-width: 568px) {
+    .experiences-2 {
         flex: 1 1 calc(50% - 20px); 
+       background-color:black;
+       font-family: 'Courier New', Courier, monospace;
     }
+    .experiences-3{
+       flex: 1 1 calc(50% - 20px); 
+       background-color:rgb(156, 123, 123);
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    h1{
+      font-family:cursive;  
+      color:rgb(24, 72, 115)
+    }
+    
+  
 }
-
-@media (max-width: 480px) {
+/*This is for devices bigger than Iphone Screen*/
+@media (min-width: 992px) {
     .experiences {
         flex: 1 1 100%; 
+        color:#007bb5;
+        background-color: rgb(135, 157, 200);
     }
+    h1
+    {
+    font-size: 30px;
 
+    }
 }
