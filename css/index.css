@@ -87,19 +87,28 @@ img{
       font-family:cursive;  
       color:rgb(24, 72, 115)
     }
-    
-  
+    .skills{
+        flex-direction: column;
+    }
+  .skills li{
+    flex:1 1 auto;
+  }
 }
 /*This is for devices bigger than Iphone Screen*/
 @media (min-width: 992px) {
     .experiences {
         flex: 1 1 100%; 
         color:#007bb5;
-        background-color: rgb(135, 157, 200);
+        
     }
     h1
     {
     font-size: 30px;
-
+    text-align: center;
     }
+    footer {
+  
+    text-align: center;
+    
+}
 }
