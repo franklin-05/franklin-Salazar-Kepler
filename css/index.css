@@ -1,9 +1,12 @@
+
 body{
 
     background-color: rgb(138, 179, 210);
     color:rgb(26, 27, 27);
 }
-
+.messages li button{
+    padding: 8px 12px
+}
 h1{
 text-align: center;
 font-style:roboto;
