@@ -3,115 +3,247 @@ body{
 
     background-color: rgb(138, 179, 210);
     color:rgb(26, 27, 27);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 60px
 }
-.messages li button{
-    padding: 8px 12px
-}
+/* Headings and Paragraphs */
 h1{
 text-align: center;
-font-style:roboto;
+font-family: 'Roboto', sans-serif;
+margin-top: 50px;
+ color: rgb(24, 72, 115);
 }
-h2,p,ul,li{
-    padding-top: 20px,30px,50px,80px;
-    display:block;
+h2{
+     text-align: center; 
+    padding-bottom: 20px; 
+    color: rgb(24, 72, 115);
+}
+p,ul,li{
+ padding: 5px 0; 
+ margin: 0;
 }
 
+/* Section Styling */
+
+section{
+    padding: 40px 20px; 
+    margin-bottom: 20px; 
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 960px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+/*Nav Bar styling */
 .top {
-    float: right;
-    color: rgb(138, 179, 210);
+    background-color: rgb(24, 72, 115); 
+    overflow: hidden; /
+    padding: 10px 0;
+    text-align: center; 
+
+    position: fixed; /* Makes the element fixed relative to the viewport */
+    width: 100%;    /* Ensures it spans the full width */
+    top: 0;         /* Positions it at the very top */
+    left: 0;        /* Positions it at the very left */
+    z-index: 1000;  /* Ensures it stays on top of other content when scrolling */
+}
+
+.top nav a {
+    display: inline-block; 
+    color: white; 
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size:17px;
- 
-  }
-  a:link{
-    text-decoration:none;
-    color:#ccc;
-  }
+    font-size: 17px;
+    transition: background-color 0.3s ease; 
+}
 
-  .fa {
+.top nav a:hover {
+    background-color: #575757; 
+    color: white;
+}
 
+/* Messages List Button */
+.messages li button{
+    padding: 8px 12px;
+    background-color: rgb(24, 72, 115);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.messages li button:hover {
+    background-color: #1a1b1b;
+}
+.messages li span {
+    flex: 1; /* Allow the message text to take available space */
+    margin-right: 10px; /* Space between message text and button */
+}
+
+/* Contact Section (LinkedIn & GitHub) */
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 30px; 
+    padding: 20px 0;
+}
+.fa {
     font-size: 30px;
-    width: 40px;
+    width: 50px; 
+    height: 50px; 
+    line-height: 50px; 
     text-align: center;
     text-decoration: none;
-    margin: 40px 100px;
-  }
+    border-radius: 50%; 
+    transition: transform 0.3s ease; 
+}
+ .fa:hover {
+    transform: scale(1.1); 
+}
 .fa-linkedin {
     background: #007bb5;
     color: white;
-    font-size: 24px;
-
 }
-img{
-    width: 100px;
+.github img {
+    width: 50px; 
     height: auto;
+    border-radius: 50%; 
+    transition: transform 0.3s ease;
 }
-.container{
-    display: flex; 
-    align-items: center; 
+.github img:hover {
+    transform: scale(1.1);
 }
-.linkedin .github{
-    padding: 10px;
-    border: 1px solid #ccc;
 
+/* Experience Section */
+.master-experience {
+    padding: 20px 0; /* Adjusted padding */
 }
+
 .experience-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 200px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
 }
-.master-experience{
-    padding: 40px;
-}
-.experiences,.experiences-2,.experiences-3{
-    flex: 1 1 calc(25% - 20px); 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+.experiences,
+.experiences-2,
+.experiences-3 {
+    flex: 1 1 calc(33% - 40px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    margin:12px;
-    border-radius: 5px; 
-    background-color: #f9f9f9bd; 
+    border-radius: 5px;
+    background-color: #f9f9f9bd;
+    text-align: center; 
+    min-width: 280px; 
 }
 
-/*This is for Ipads viewing*/
-@media (max-width: 568px) {
-    .experiences-2 {
-        flex: 1 1 calc(50% - 20px); 
-       background-color:black;
-       font-family: 'Courier New', Courier, monospace;
-    }
-    .experiences-3{
-       flex: 1 1 calc(50% - 20px); 
-       background-color:rgb(156, 123, 123);
-       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    h1{
-      font-family:cursive;  
-      color:rgb(24, 72, 115)
-    }
-    .skills{
-        flex-direction: column;
-    }
-  .skills li{
-    flex:1 1 auto;
-  }
+/*Form styling*/
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9bd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/*This is for devices bigger than Iphone Screen*/
-@media (min-width: 992px) {
-    .experiences {
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+orm textarea {
+    resize: vertical; 
+    min-height: 100px;
+}
+
+form button {
+    background-color: rgb(24, 72, 115);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1a1b1b;
+}
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(24, 72, 115);
+    color: white;
+    margin-top: 30px;
+}
+/* Media query for smaller devices (e.g., phones) */
+@media (max-width: 768px) {
+    .top nav a {
+        display: block; 
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .experiences,
+    .experiences-2,
+    .experiences-3 {
         flex: 1 1 100%; 
-        color:#007bb5;
-        
+        margin: 10px 0; 
     }
-    h1
-    {
-    font-size: 30px;
-    text-align: center;
+
+    h1 {
+        font-size: 2em; /* Slightly smaller font size for h1 */
     }
-    footer {
-  
-    text-align: center;
-    
+
+    /*specific styles for .experiences-2 and .experiences-3 can be here if needed */
+    .experiences-2 {
+        background-color: black;
+        color: white; /* Ensure text is visible on black background */
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .experiences-3 {
+        background-color: rgb(156, 123, 123);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .experiences,
+    .experiences-2,
+    .experiences-3 {
+        flex: 1 1 calc(50% - 30px); 
+    }
+}
+
+/* Media query for larger devices (desktops) */
+@media (min-width: 1025px) {
+    
+    .experiences,
+    .experiences-2,
+    .experiences-3 {
+        flex: 1 1 calc(33.333% - 30px); 
+    }
 }
