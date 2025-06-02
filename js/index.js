@@ -21,7 +21,8 @@ for(let i=0;i<skills.length;i++){
     skill.innerText=skills[i]
     skillsList.appendChild(skill)
 }
-      
+
+//Adding projects 
 
         // Selects messages from form
     //const messageForm = document.getElementById('leave_message'); // Or document.getElementById('leave_message');
@@ -69,3 +70,33 @@ for(let i=0;i<skills.length;i++){
  });
 
     });
+
+    
+
+fetch('https://api.github.com/users/franklin-05/repos')
+.then(response=>{
+ if(!response.ok){
+    throw new Error(`Your Request has failed! ${response.status}`)
+ }
+    return response.json();
+})
+.then(repositories =>{
+console.log('Here are your GitHub Repositories' , repositories)
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+for (let i = 0; i < repositories.length; i++) {
+                const project = document.createElement('li'); // Create a new list item
+                
+                const repoLink = document.createElement('a');
+                repoLink.href = repositories[i].html_url; // Get the repository URL
+                repoLink.innerText = repositories[i].name; // Set the link text to the repository name
+                repoLink.target = "_blank"; // Open the link in a new tab
+
+                project.appendChild(repoLink); // Append the link to the list item
+                projectList.appendChild(project); // Append the project element to the projectList
+            }
+       
+})
+.catch(error =>{
+console.log('An error took place', error)
+});

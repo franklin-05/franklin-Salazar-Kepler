@@ -41,7 +41,7 @@ section{
 .top {
     background-color: rgb(24, 72, 115); 
     overflow: hidden; /
-    padding: 10px 0;
+    padding:10px 0;
     text-align: center; 
 
     position: fixed; /* Makes the element fixed relative to the viewport */
