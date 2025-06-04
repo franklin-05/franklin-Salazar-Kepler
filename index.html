@@ -10,9 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Franklin Salazar">
 
-<title>
-    Franklin Salazar's Portfolio
-</title>
+<title>Franklin Salazar's Portfolio</title>
 
 
 <link rel="stylesheet" href="css/index.css">
@@ -29,6 +27,7 @@
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Connect</a>
+     <a href="#leave_message">Leave a Message</a>
 </nav>
 </div>
 
@@ -51,12 +50,14 @@
     </section>
 <section id="projects">
     <h2>Projects</h2>
+    <ul> </ul>
 </section>
-<section id="experience">
+
+    <section id="experience">
     <h2>Experience</h2>
-   <div class="master-experience">
-    <div class="experience-contaier">
-    <div class="experiences">
+    <div class="master-experience">
+         <div class="experience-contaier">
+            <div class="experiences">
        <h3> IT consultant  </h3> 
        <p>
          Duration: Aug 2020- Present
@@ -110,7 +111,33 @@
 </section>
 
 <script src="js/index.js"> </script>
+<section>
+ <h2>
+    Leave a Message
+ </h2>
+ <form id="leave_message" name="leave_message">
+            <label for="usersName">Name:</label><br>
+            <input type="text" id="usersName" name="usersName" required><br><br>
+
+            <label for="usersEmail">Email:</label><br>
+            <input type="email" id="usersEmail" name="usersEmail" required><br><br>
+
+            <label for="usersMessage">Message:</label><br>
+            <textarea id="usersMessage" name="usersMessage" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+ </form>
+</section>
+<section id="messages">
+<h2>Messages</h2>
+<ul>
+
+</ul>
+</section>
+<footer>
+</footer>
 
 </body>
+
 
 </html>
